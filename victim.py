@@ -1,5 +1,5 @@
 import socket # Importamos la librería socket para establecer conexiones entre hosts.
-import subproccess as shell
+import subprocess as shell
 # import asyncio # Importamos la librería asyncio para un flujo asíncrono y multitarea.
 
 # ===================================
